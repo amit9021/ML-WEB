@@ -22,7 +22,7 @@
     <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
+    <link href="style.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -48,11 +48,14 @@
 <body class="container d-flex h-100% text-center text-white bg-dark">
 
     <div class="cover-container d-flex w-100 h-200 p-3 mx-auto flex-column ">
-
-        <div id="loading">
-            <h1>Model is loading...</h1>
+        <div id="loading" class="mt-20%">
+            <div class="cover-container d-flex w-100 h-200 p-3 mx-auto flex-column">
+                <h1>Model is loading...</h1>
+            </div>
+            <div class="loader cover-container d-flex p-3 mx-auto flex-column"></div>
         </div>
-        <main id="ui" style=" display:none">
+
+        <main id="ui" style=" display:none" class="mt-50%">
 
             <h6>Model load time: </h6>
             <h6 id="loadTime"></h6>
