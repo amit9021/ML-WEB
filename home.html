@@ -55,23 +55,25 @@
             <div class="loader cover-container d-flex p-3 mx-auto flex-column"></div>
         </div>
 
-        <main id="ui" style=" display:none" class="mt-50%">
+        <main id="ui" style=" display:none" class="cover-container text-center align-middle w-100 h-200 p-3 mx-auto ">
 
             <h6>Model load time: </h6>
             <h6 id="loadTime"></h6>
 
             <h1>Cats vs Dog prediction</h1>
             <p class="lead">Please upload an image of a cat or a dog</p>
-            <p class="lead">
+            <p class="lead"></p>
 
             <h3>Upload file</h3>
+            <p class="lead"></p>
             <input type=file name=file accept="image/png, image/jpeg">
 
-
+            <p class="lead">
             <h3>Or get image from URL</h3>
+            <p class="lead"></p>
             <input type=url id="url" name=url alt=url>
             <button onclick="imgUrl()">PREDICT</button>
-            </p>
+
             <div class="cover-container text-center w-100 h-200 p-3 mx-auto flex-column " id="run" style=display:none>
                 <h2>Runnig time: </h2>
                 <h3 id="runningTime"></h3>
