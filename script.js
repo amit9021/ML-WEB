@@ -48,9 +48,27 @@ function imgUrl() {
   };
 }
 
-async function sendToPredict(preprocessedInputToArray) {
-  const model = await tf.loadGraphModel("tfjs_graph/model.json");
+let model;
+
+
+(async function loadChachModel() {
+  // load the model after page loaded
+  const loadstart = window.performance.now();
+  model = await tf.loadGraphModel("tfjs_graph/model.json");
+  prediction = await model.predict(tf.zeros([1, 128, 128, 3]));
   console.log("model loaded");
+  const loadends = window.performance.now();
+  $("#ui").show(600);
+  $("#loading").hide(600);
+  $("#loadTime").html(Math.round(loadends - loadstart) + ' ms');
+})();
+
+
+
+
+async function sendToPredict(preprocessedInputToArray) {
+  // const model = await tf.loadGraphModel("tfjs_graph/model.json");
+  // console.log("model loaded");
   const prediction = await model.predict(preprocessedInputToArray);
   return prediction.array();
 }

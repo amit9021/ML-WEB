@@ -45,12 +45,18 @@
     <link href="https://getbootstrap.com/docs/5.0/examples/cover/cover.css" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100% text-center text-white bg-dark">
+<body class="container d-flex h-100% text-center text-white bg-dark">
 
     <div class="cover-container d-flex w-100 h-200 p-3 mx-auto flex-column ">
 
+        <div id="loading">
+            <h1>Model is loading...</h1>
+        </div>
+        <main id="ui" style=" display:none">
 
-        <main>
+            <h6>Model load time: </h6>
+            <h6 id="loadTime"></h6>
+
             <h1>Cats vs Dog prediction</h1>
             <p class="lead">Please upload an image of a cat or a dog</p>
             <p class="lead">
